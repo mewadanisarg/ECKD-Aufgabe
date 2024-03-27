@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Private Person Information</h2>
+    <form [formGroup]="privatePersonForm" Percentage>
+        <mat-form-field appearance="fill">
+            <mat-label>Title</mat-label>
+            <input matInput formControlName="title" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Vorname</mat-label>
+            <input matInput formControlName="vorname" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Nachname</mat-label>
+            <input matInput formControlName="nachname" required>
+        </mat-form-field>
+    </form>
+    <!-- <person-private></person-private> -->
+    <app-adresse></app-adresse>
+
+    <app-bankverbindung></app-bankverbindung>
+
+
+    <person-juristisch></person-juristisch>
+
+    <button mat-raised-button color="primary" [disabled]="!privatePersonForm.valid" (click)="onSubmit()">
+        Submit
+    </button>
+</div>

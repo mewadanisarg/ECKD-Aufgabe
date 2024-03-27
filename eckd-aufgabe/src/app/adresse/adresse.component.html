@@ -1,0 +1,23 @@
+<!-- adresse.component.html -->
+<h2>Address Information</h2>
+<form [formGroup]="adresseForm">
+    <mat-form-field appearance="fill">
+        <mat-label>Straße</mat-label>
+        <input matInput formControlName="strasse" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Hausnummer</mat-label>
+        <input matInput formControlName="hausnummer" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Stadt</mat-label>
+        <input matInput formControlName="ort" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Postal Code</mat-label>
+        <input matInput formControlName="plz" pattern="^\d{5}$" required>
+        <mat-hint align="end">5-digit postal code</mat-hint>
+    </mat-form-field>
+</form>

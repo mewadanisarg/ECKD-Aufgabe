@@ -1,0 +1,16 @@
+<div class="bankverbindung-container">
+    <!-- bankverbindung.component.html -->
+    <h2>Bankverbindung Information</h2>
+    <form [formGroup]="bankverbindungForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Account Holder</mat-label>
+            <input matInput formControlName="accountHolder" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>IBAN</mat-label>
+            <input matInput formControlName="iban">
+        </mat-form-field>
+    </form>
+
+</div>

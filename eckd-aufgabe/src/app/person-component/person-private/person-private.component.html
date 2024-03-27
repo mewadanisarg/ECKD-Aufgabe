@@ -1,0 +1,22 @@
+
+<h2>Private Person Information</h2>
+<form [formGroup]="privatePersonForm">
+    <mat-form-field appearance="fill">
+        <mat-label>Full Name</mat-label>
+        <input matInput formControlName="fullname" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" required>
+        <mat-error *ngIf="privatePersonForm.get('email').hasError('email')">
+            Please enter a valid email address.
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Mobile</mat-label>
+        <input matInput formControlName="mobile" pattern="^\d{10}$">
+        <mat-hint align="end">10-digit mobile number</mat-hint>
+    </mat-form-field>
+</form>
